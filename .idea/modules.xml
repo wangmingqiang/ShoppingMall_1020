@@ -4,6 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ShoppingMall_1020.iml" filepath="$PROJECT_DIR$/ShoppingMall_1020.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gradationscroll/gradationscroll.iml" filepath="$PROJECT_DIR$/gradationscroll/gradationscroll.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libzxing/libzxing.iml" filepath="$PROJECT_DIR$/libzxing/libzxing.iml" />
     </modules>
   </component>
 </project>
