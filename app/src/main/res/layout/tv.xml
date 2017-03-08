@@ -8,7 +8,7 @@
     android:text="Android"
     android:lines="2"
     android:padding="5dp"
-    android:background="@drawable/tag_shape"
+    android:background="@drawable/tagw_bg"
     android:textColor="#ff0000"
     android:textSize="16sp"
     xmlns:android="http://schemas.android.com/apk/res/android" />

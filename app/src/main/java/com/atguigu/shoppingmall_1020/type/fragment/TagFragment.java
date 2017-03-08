@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.alibaba.fastjson.JSON;
 import com.atguigu.shoppingmall_1020.R;
@@ -22,6 +23,7 @@ import com.zhy.view.flowlayout.TagFlowLayout;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
@@ -110,6 +112,29 @@ public class TagFragment extends BaseFragment {
                     tv.setText(result.get(position).getName());
                     tv.setTextColor(colors[position%colors.length]);
                     return tv;
+                }
+
+            });
+
+
+
+
+            idFlowlayout.setOnTagClickListener(new TagFlowLayout.OnTagClickListener()
+            {
+                @Override
+                public boolean onTagClick(View view, int position, FlowLayout parent)
+                {
+                    Toast.makeText(getActivity(), result.get(position).getName(), Toast.LENGTH_SHORT).show();
+                    return true;
+                }
+            });
+
+            idFlowlayout.setOnSelectListener(new TagFlowLayout.OnSelectListener()
+            {
+                @Override
+                public void onSelected(Set<Integer> selectPosSet)
+                {
+                    getActivity().setTitle("choose:" + selectPosSet.toString());
                 }
             });
 
