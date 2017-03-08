@@ -46,6 +46,7 @@ public class QRcode extends AppCompatActivity {
         });
 
 
+
     }
 
 
