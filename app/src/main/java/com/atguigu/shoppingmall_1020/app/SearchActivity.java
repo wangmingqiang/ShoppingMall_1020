@@ -109,6 +109,9 @@ public class SearchActivity extends AppCompatActivity implements View.OnClickLis
                     greenBeanDao.insert(greenBean);
                     datas.add(greenBean.getName());
 
+                    adapter = new ArrayAdapter(this,android.R.layout.test_list_item,datas);
+                    rvSearch.setAdapter(adapter);
+
                     if(adapter!=null) {
                         adapter.notifyDataSetChanged();
                     }
@@ -116,7 +119,7 @@ public class SearchActivity extends AppCompatActivity implements View.OnClickLis
                     btClear.setVisibility(View.VISIBLE);
                     startActivity( new Intent(this, GoodsListActivity.class));
 
-                    finish();
+                   // finish();
 
                 }
 

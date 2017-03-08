@@ -24,8 +24,7 @@
             android:gravity="center"
             android:text="取消"
             android:textColor="#4e4444"
-            android:textSize="15sp"
-             />
+            android:textSize="15sp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -50,8 +49,7 @@
             android:gravity="center"
             android:text="确定"
             android:textColor="#4e4444"
-            android:textSize="15sp"
-             />
+            android:textSize="15sp" />
     </LinearLayout>
 
     <View
@@ -59,248 +57,141 @@
         android:layout_height="5dp"
         android:background="#eeee" />
 
-    <RelativeLayout
-        android:id="@+id/rl_price_nolimit"
-        android:layout_width="match_parent"
+    <RadioGroup
+        android:id="@+id/rb_price_seletor"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="#fff"
-        android:padding="10dp">
+        android:orientation="vertical">
 
-        <TextView
+        <RadioButton
+            android:id="@+id/rb_price_nolimit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#fff"
+            android:button="@null"
+            android:drawablePadding="100dp"
+            android:drawableRight="@drawable/checkbox_selector"
+            android:padding="10dp"
             android:text="不限"
             android:textColor="#4e4444"
             android:textSize="15sp" />
 
-        <ImageView
-            android:id="@+id/iv_price_no_limit"
+        <View
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:background="@drawable/filter_type_selected" />
-    </RelativeLayout>
+            android:layout_height="1dp"
+            android:background="#eeee" />
 
-    <View
-        android:layout_width="wrap_content"
-        android:layout_height="1dp"
-        android:background="#eeee" />
-
-    <RelativeLayout
-        android:id="@+id/rl_price_0_15"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#fff"
-        android:padding="10dp">
-
-        <TextView
+        <RadioButton
+            android:id="@+id/rb_price_0_15"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#fff"
+            android:button="@null"
+            android:drawablePadding="100dp"
+            android:drawableRight="@drawable/checkbox_selector"
+            android:padding="10dp"
             android:text="0-15"
             android:textColor="#4e4444"
             android:textSize="15sp" />
 
-        <ImageView
-            android:id="@+id/iv_price_0_15"
+        <View
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:background="@drawable/filter_type_selected" />
-    </RelativeLayout>
+            android:layout_height="1dp"
+            android:background="#eeee" />
 
-    <View
-        android:layout_width="wrap_content"
-        android:layout_height="1dp"
-        android:background="#eeee" />
-
-    <RelativeLayout
-        android:id="@+id/rl_price_15_30"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#fff"
-        android:padding="10dp">
-
-        <TextView
+        <RadioButton
+            android:id="@+id/rb_price_15_30"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#fff"
+            android:button="@null"
+            android:drawablePadding="100dp"
+            android:drawableRight="@drawable/checkbox_selector"
+            android:padding="10dp"
             android:text="15-30"
             android:textColor="#4e4444"
             android:textSize="15sp" />
 
-        <ImageView
-            android:id="@+id/iv_price_15_30"
+        <View
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:background="@drawable/filter_type_selected" />
-    </RelativeLayout>
+            android:layout_height="1dp"
+            android:background="#eeee" />
 
-    <View
-        android:layout_width="wrap_content"
-        android:layout_height="1dp"
-        android:background="#eeee" />
-
-    <RelativeLayout
-        android:id="@+id/rl_price_30_50"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#fff"
-        android:clickable="true"
-        android:padding="10dp">
-
-        <TextView
+        <RadioButton
+            android:id="@+id/rb_price_30_50"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#fff"
+            android:button="@null"
+            android:drawablePadding="100dp"
+            android:drawableRight="@drawable/checkbox_selector"
+            android:padding="10dp"
             android:text="30-50"
             android:textColor="#4e4444"
             android:textSize="15sp" />
 
-        <ImageView
-            android:id="@+id/iv_price_30_50"
+        <View
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:background="@drawable/filter_type_selected"
-            android:clickable="true" />
-    </RelativeLayout>
+            android:layout_height="1dp"
+            android:background="#eeee" />
 
-    <View
-        android:layout_width="wrap_content"
-        android:layout_height="1dp"
-        android:background="#eeee" />
-
-    <RelativeLayout
-        android:id="@+id/rl_price_50_70"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#fff"
-        android:padding="10dp">
-
-        <TextView
+        <RadioButton
+            android:id="@+id/rb_price_50_70"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#fff"
+            android:button="@null"
+            android:drawablePadding="100dp"
+            android:drawableRight="@drawable/checkbox_selector"
+            android:padding="10dp"
             android:text="50-70"
             android:textColor="#4e4444"
             android:textSize="15sp" />
 
-        <ImageView
-            android:id="@+id/iv_price_50_70"
+        <View
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:background="@drawable/filter_type_selected" />
-    </RelativeLayout>
+            android:layout_height="1dp"
+            android:background="#eeee" />
 
-    <View
-        android:layout_width="wrap_content"
-        android:layout_height="1dp"
-        android:background="#eeee" />
-
-    <RelativeLayout
-        android:id="@+id/rl_price_70_100"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#fff"
-        android:padding="10dp">
-
-        <TextView
+        <RadioButton
+            android:id="@+id/rb_price_70_100"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#fff"
+            android:button="@null"
+            android:drawablePadding="100dp"
+            android:drawableRight="@drawable/checkbox_selector"
+            android:padding="10dp"
             android:text="70-100"
             android:textColor="#4e4444"
             android:textSize="15sp" />
 
-        <ImageView
-            android:id="@+id/iv_price_70_100"
+        <View
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:background="@drawable/filter_type_selected" />
-    </RelativeLayout>
+            android:layout_height="1dp"
+            android:background="#eeee" />
 
-    <View
-        android:layout_width="wrap_content"
-        android:layout_height="1dp"
-        android:background="#eeee" />
-
-    <RelativeLayout
-        android:id="@+id/rl_price_100"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#fff"
-        android:padding="10dp">
-
-        <TextView
+        <RadioButton
+            android:id="@+id/rb_price_100"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#fff"
+            android:button="@null"
+            android:drawablePadding="100dp"
+            android:drawableRight="@drawable/checkbox_selector"
+            android:padding="10dp"
             android:text="100以上"
             android:textColor="#4e4444"
             android:textSize="15sp" />
 
-        <ImageView
-            android:id="@+id/iv_price_100"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:background="@drawable/filter_type_selected" />
-    </RelativeLayout>
-
-    <View
-        android:layout_width="wrap_content"
-        android:layout_height="1dp"
-        android:background="#eeee" />
-
-    <RelativeLayout
-        android:id="@+id/rl_select_price"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#fff"
-        android:padding="10dp">
-
-        <EditText
-            android:id="@+id/et_price_start"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/mq_bg_edit_view"
-            android:hint="起始价格"
-            android:padding="5dp"
-            android:textColor="#4e4444"
-            android:textSize="15sp" />
-
         <View
-            android:id="@+id/v_price_line"
-            android:layout_width="10dp"
+            android:layout_width="wrap_content"
             android:layout_height="1dp"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
-            android:layout_toRightOf="@id/et_price_start"
-            android:background="#000" />
+            android:background="#eeee" />
 
-        <EditText
-            android:id="@+id/et_price_end"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/v_price_line"
-            android:background="@drawable/mq_bg_edit_view"
-            android:hint="终止价格"
-            android:padding="5dp"
-            android:textColor="#4e4444"
-            android:textSize="15sp" />
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:background="@drawable/filter_type_selected" />
-    </RelativeLayout>
+    </RadioGroup>
+
+
 
 </LinearLayout>

@@ -60,278 +60,186 @@
         android:layout_height="5dp"
         android:background="#eeee" />
 
-    <RelativeLayout
-        android:id="@+id/rl_theme_all"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#fff"
-        android:padding="10dp">
 
-        <TextView
+    <RadioGroup
+        android:id="@+id/rb_theme_selector"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/rb_theme_all"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#fff"
+            android:button="@null"
+            android:drawablePadding="100dp"
+            android:drawableRight="@drawable/checkbox_selector"
+            android:padding="10dp"
             android:text="全部"
             android:textColor="#4e4444"
             android:textSize="15sp" />
 
-        <ImageView
-            android:id="@+id/iv_theme_all"
+        <View
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:background="@drawable/filter_type_selected" />
-    </RelativeLayout>
+            android:layout_height="1dp"
+            android:background="#eeee" />
 
-    <View
-        android:layout_width="wrap_content"
-        android:layout_height="1dp"
-        android:background="#eeee" />
-
-    <RelativeLayout
-        android:id="@+id/rl_theme_note"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#fff"
-        android:padding="10dp">
-
-        <TextView
+        <RadioButton
+            android:id="@+id/rb_theme_note"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#fff"
+            android:button="@null"
+            android:drawablePadding="100dp"
+            android:drawableRight="@drawable/checkbox_selector"
+            android:padding="10dp"
             android:text="盗墓笔记"
             android:textColor="#4e4444"
             android:textSize="15sp" />
 
-        <ImageView
-            android:id="@+id/iv_theme_note"
+        <View
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:background="@drawable/filter_type_selected" />
-    </RelativeLayout>
+            android:layout_height="1dp"
+            android:background="#eeee" />
 
-    <View
-        android:layout_width="wrap_content"
-        android:layout_height="1dp"
-        android:background="#eeee" />
-
-    <RelativeLayout
-        android:id="@+id/rl_theme_funko"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#fff"
-        android:padding="10dp">
-
-        <TextView
+        <RadioButton
+            android:id="@+id/rb_theme_funko"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#fff"
+            android:button="@null"
+            android:drawablePadding="100dp"
+            android:drawableRight="@drawable/checkbox_selector"
+            android:padding="10dp"
             android:text="FUNKO"
             android:textColor="#4e4444"
             android:textSize="15sp" />
 
-        <ImageView
-            android:id="@+id/iv_theme_funko"
+        <View
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:background="@drawable/filter_type_selected" />
-    </RelativeLayout>
+            android:layout_height="1dp"
+            android:background="#eeee" />
 
-    <View
-        android:layout_width="wrap_content"
-        android:layout_height="1dp"
-        android:background="#eeee" />
-
-    <RelativeLayout
-        android:id="@+id/rl_theme_gsc"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#fff"
-        android:padding="10dp">
-
-        <TextView
+        <RadioButton
+            android:id="@+id/rb_theme_gsc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#fff"
+            android:button="@null"
+            android:drawablePadding="100dp"
+            android:drawableRight="@drawable/checkbox_selector"
+            android:padding="10dp"
             android:text="GSC"
             android:textColor="#4e4444"
             android:textSize="15sp" />
 
-        <ImageView
-            android:id="@+id/iv_theme_gsc"
+        <View
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:background="@drawable/filter_type_selected" />
-    </RelativeLayout>
+            android:layout_height="1dp"
+            android:background="#eeee" />
 
-    <View
-        android:layout_width="wrap_content"
-        android:layout_height="1dp"
-        android:background="#eeee" />
-
-    <RelativeLayout
-        android:id="@+id/rl_theme_origin"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#fff"
-        android:padding="10dp">
-
-        <TextView
+        <RadioButton
+            android:id="@+id/rb_theme_origin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#fff"
+            android:button="@null"
+            android:drawablePadding="100dp"
+            android:drawableRight="@drawable/checkbox_selector"
+            android:padding="10dp"
             android:text="古风原创"
             android:textColor="#4e4444"
             android:textSize="15sp" />
 
-        <ImageView
-            android:id="@+id/iv_theme_origin"
+        <View
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:background="@drawable/filter_type_selected" />
-    </RelativeLayout>
+            android:layout_height="1dp"
+            android:background="#eeee" />
 
-    <View
-        android:layout_width="wrap_content"
-        android:layout_height="1dp"
-        android:background="#eeee" />
-
-    <RelativeLayout
-        android:id="@+id/rl_theme_sword"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#fff"
-        android:padding="10dp">
-
-        <TextView
+        <RadioButton
+            android:id="@+id/rb_theme_sword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#fff"
+            android:button="@null"
+            android:drawablePadding="100dp"
+            android:drawableRight="@drawable/checkbox_selector"
+            android:padding="10dp"
             android:text="剑侠情愿叁"
             android:textColor="#4e4444"
             android:textSize="15sp" />
 
-        <ImageView
-            android:id="@+id/iv_theme_sword"
+        <View
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:background="@drawable/filter_type_selected" />
-    </RelativeLayout>
+            android:layout_height="1dp"
+            android:background="#eeee" />
 
-    <View
-        android:layout_width="wrap_content"
-        android:layout_height="1dp"
-        android:background="#eeee" />
-
-    <RelativeLayout
-        android:id="@+id/rl_theme_food"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#fff"
-        android:padding="10dp">
-
-        <TextView
+        <RadioButton
+            android:id="@+id/rb_theme_moon"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#fff"
-            android:text="零食仓"
-            android:textColor="#4e4444"
-            android:textSize="15sp" />
-
-        <ImageView
-            android:id="@+id/iv_theme_food"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:background="@drawable/filter_type_selected" />
-    </RelativeLayout>
-
-    <View
-        android:layout_width="wrap_content"
-        android:layout_height="1dp"
-        android:background="#eeee" />
-
-    <RelativeLayout
-        android:id="@+id/rl_theme_moon"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#fff"
-        android:padding="10dp">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#fff"
+            android:button="@null"
+            android:drawablePadding="100dp"
+            android:drawableRight="@drawable/checkbox_selector"
+            android:padding="10dp"
             android:text="秦时明月"
             android:textColor="#4e4444"
             android:textSize="15sp" />
 
-        <ImageView
-            android:id="@+id/iv_theme_moon"
+        <View
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:background="@drawable/filter_type_selected" />
-    </RelativeLayout>
+            android:layout_height="1dp"
+            android:background="#eeee" />
 
-    <View
-        android:layout_width="wrap_content"
-        android:layout_height="1dp"
-        android:background="#eeee" />
 
-    <RelativeLayout
-        android:id="@+id/rl_theme_quanzhi"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#fff"
-        android:padding="10dp">
 
-        <TextView
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:background="#eeee" />
+
+        <RadioButton
+            android:id="@+id/rb_theme_quanzhi"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#fff"
+            android:button="@null"
+            android:drawablePadding="100dp"
+            android:drawableRight="@drawable/checkbox_selector"
+            android:padding="10dp"
             android:text="全职高手"
             android:textColor="#4e4444"
             android:textSize="15sp" />
 
-        <ImageView
-            android:id="@+id/iv_theme_quanzhi"
+        <View
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:background="@drawable/filter_type_selected" />
-    </RelativeLayout>
+            android:layout_height="1dp"
+            android:background="#eeee" />
 
-    <View
-        android:layout_width="wrap_content"
-        android:layout_height="1dp"
-        android:background="#eeee" />
 
-    <RelativeLayout
-        android:id="@+id/rl_theme_gress"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#fff"
-        android:padding="10dp">
-
-        <TextView
+        <RadioButton
+            android:id="@+id/rb_theme_gress"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#fff"
+            android:button="@null"
+            android:drawablePadding="100dp"
+            android:drawableRight="@drawable/checkbox_selector"
+            android:padding="10dp"
             android:text="长草颜文字"
             android:textColor="#4e4444"
             android:textSize="15sp" />
 
-        <ImageView
-            android:id="@+id/iv_theme_gress"
+        <View
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:background="@drawable/filter_type_selected" />
-    </RelativeLayout>
+            android:layout_height="1dp"
+            android:background="#eeee" />
+
+
+    </RadioGroup>
+
+
 </LinearLayout>
+

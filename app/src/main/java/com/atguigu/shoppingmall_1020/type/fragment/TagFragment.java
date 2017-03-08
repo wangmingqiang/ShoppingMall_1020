@@ -12,7 +12,6 @@ import android.widget.Toast;
 import com.alibaba.fastjson.JSON;
 import com.atguigu.shoppingmall_1020.R;
 import com.atguigu.shoppingmall_1020.base.BaseFragment;
-import com.atguigu.shoppingmall_1020.type.adapter.TagGridViewAdapter;
 import com.atguigu.shoppingmall_1020.type.bean.TagBean;
 import com.atguigu.shoppingmall_1020.utils.Constants;
 import com.zhy.http.okhttp.OkHttpUtils;
@@ -40,7 +39,7 @@ public class TagFragment extends BaseFragment {
     TagFlowLayout idFlowlayout;
     private List<TagBean.ResultBean> result;
     private ArrayList<String> list;
-    private TagGridViewAdapter adapter;
+
     private int[] colors = {
             Color.parseColor("#f0a420"), Color.parseColor("#4ba5e2"), Color.parseColor("#f0839a"),
             Color.parseColor("#4ba5e2"), Color.parseColor("#f0839a"), Color.parseColor("#f0a420"),
@@ -141,6 +140,8 @@ public class TagFragment extends BaseFragment {
         }
 
     }
+
+
 
     @Override
     public void onDestroyView() {
