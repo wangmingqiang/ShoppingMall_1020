@@ -21,6 +21,7 @@ import android.widget.Toast;
 import com.alibaba.fastjson.JSON;
 import com.atguigu.shoppingmall_1020.R;
 import com.atguigu.shoppingmall_1020.app.GoodsInfoActivity;
+import com.atguigu.shoppingmall_1020.app.SearchActivity;
 import com.atguigu.shoppingmall_1020.base.BaseFragment;
 import com.atguigu.shoppingmall_1020.home.adapter.HomeAdapter;
 import com.atguigu.shoppingmall_1020.home.bean.GoodsBean;
@@ -44,7 +45,7 @@ import static com.atguigu.shoppingmall_1020.home.adapter.HomeAdapter.GOODS_BEAN;
  * Created by wangmingqiang on 2017/2/22.
  */
 
-public class HomeFragment extends BaseFragment {
+public class  HomeFragment extends BaseFragment {
 
     @InjectView(R.id.tv_search_home)
     TextView tvSearchHome;
@@ -151,17 +152,23 @@ public class HomeFragment extends BaseFragment {
     @OnClick({R.id.tv_search_home, R.id.tv_message_home, R.id.ib_top,R.id.btnSan})
     public void onClick(View view) {
         switch (view.getId()) {
+
             case R.id.tv_search_home:
-                Toast.makeText(mContext, "搜索", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(mContext, "搜索", Toast.LENGTH_SHORT).show();
+                Intent intent=new Intent(mContext, SearchActivity.class);
+                startActivity(intent);
                 break;
+
             case R.id.tv_message_home:
                 Toast.makeText(mContext, "查看", Toast.LENGTH_SHORT).show();
                 break;
+
             case R.id.ib_top:
                 // Toast.makeText(mContext, "顶部", Toast.LENGTH_SHORT).show();
                 rvHome.scrollToPosition(0);
-            case R.id.btnSan:
+                break;
 
+            case R.id.btnSan:
                 startActivityForResult(new Intent(mContext, CaptureActivity.class), 0);
 
                 break;

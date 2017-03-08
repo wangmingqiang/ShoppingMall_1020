@@ -33,11 +33,15 @@ public class QRcode extends AppCompatActivity {
 
         goodsBean = (GoodsBean) getIntent().getSerializableExtra("goodsBean");
 
-        Glide.with(this).load(Constants.BASE_URL_IMAGE+goodsBean.getFigure()).asBitmap().into(new SimpleTarget<Bitmap>() {
-            @Override
-            public void onResourceReady(Bitmap resource, GlideAnimation<? super Bitmap> glideAnimation) {
-                Bitmap bitmap= EncodingUtils.createQRCode(Constants.BASE_URL_IMAGE+goodsBean.getFigure(),500,500,resource);
-                ivQr.setImageBitmap(bitmap);
+        Glide.with(this)
+                .load(Constants.BASE_URL_IMAGE+goodsBean.getFigure())
+                .asBitmap().into(new SimpleTarget<Bitmap>() {
+
+                        @Override
+                        public void onResourceReady(Bitmap resource, GlideAnimation<? super Bitmap> glideAnimation) {
+                            Bitmap bitmap= EncodingUtils.createQRCode(Constants.BASE_URL_IMAGE+goodsBean.getFigure(),
+                                    500,500,resource);
+                            ivQr.setImageBitmap(bitmap);
             }
         });
 

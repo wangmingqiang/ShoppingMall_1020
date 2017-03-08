@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:id="@+id/ll_titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ed3f3f"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/et_search_home"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/search_home_shape"
+            android:drawableLeft="@drawable/home_search_icon"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:padding="5dp"
+            android:hint="输入搜索信息"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tv_yuying_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:drawablePadding="3dp"
+            android:gravity="center"
+            android:drawableLeft="@drawable/voice_empty"
+            android:textColor="#fff" />
+        <TextView
+            android:id="@+id/bt_search_home"
+            android:layout_width="50dp"
+            android:layout_height="35dp"
+            android:layout_margin="10dp"
+            android:drawablePadding="3dp"
+            android:gravity="center"
+            android:background="#329329"
+            android:text="搜索"
+            />
+    </LinearLayout>
+
+
+    <ListView
+        android:id="@+id/rv_search"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/ll_titlebar"
+        />
+
+    <Button
+        android:layout_centerInParent="true"
+        android:layout_alignBottom="@id/rv_search"
+        android:layout_marginBottom="20dp"
+        android:id="@+id/bt_clear"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:text="清除搜索记录"/>
+
+</RelativeLayout>
