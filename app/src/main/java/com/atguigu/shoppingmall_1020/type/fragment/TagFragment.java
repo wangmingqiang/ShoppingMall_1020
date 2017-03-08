@@ -1,10 +1,12 @@
 package com.atguigu.shoppingmall_1020.type.fragment;
 
+import android.graphics.Color;
+import android.os.Bundle;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.GridView;
-import android.widget.Toast;
+import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.alibaba.fastjson.JSON;
 import com.atguigu.shoppingmall_1020.R;
@@ -14,7 +16,11 @@ import com.atguigu.shoppingmall_1020.type.bean.TagBean;
 import com.atguigu.shoppingmall_1020.utils.Constants;
 import com.zhy.http.okhttp.OkHttpUtils;
 import com.zhy.http.okhttp.callback.StringCallback;
+import com.zhy.view.flowlayout.FlowLayout;
+import com.zhy.view.flowlayout.TagAdapter;
+import com.zhy.view.flowlayout.TagFlowLayout;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.ButterKnife;
@@ -27,16 +33,24 @@ import okhttp3.Call;
 
 public class TagFragment extends BaseFragment {
 
-    @InjectView(R.id.gv_tag)
-    GridView gvTag;
+
+    @InjectView(R.id.id_flowlayout)
+    TagFlowLayout idFlowlayout;
     private List<TagBean.ResultBean> result;
+    private ArrayList<String> list;
     private TagGridViewAdapter adapter;
+    private int[] colors = {
+            Color.parseColor("#f0a420"), Color.parseColor("#4ba5e2"), Color.parseColor("#f0839a"),
+            Color.parseColor("#4ba5e2"), Color.parseColor("#f0839a"), Color.parseColor("#f0a420"),
+            Color.parseColor("#f0839a"), Color.parseColor("#f0a420"), Color.parseColor("#4ba5e2")
+    };
 
     @Override
     public View initView() {
         View view = View.inflate(mContext, R.layout.fragment_tag, null);
         ButterKnife.inject(this, view);
         return view;
+
     }
 
     @Override
@@ -65,32 +79,55 @@ public class TagFragment extends BaseFragment {
 
         TagBean tagBean = JSON.parseObject(response, TagBean.class);
         result = tagBean.getResult();
+        list = new ArrayList<>();
+
+        for (int i = 0; i < result.size(); i++) {
+            String name = result.get(i).getName();
+            list.add(name);
+        }
 
         if (result != null && result.size() > 0) {
-            //设置适配器
-            adapter = new TagGridViewAdapter(mContext,result);
 
-            gvTag.setAdapter(adapter);
+//            adapter = new TagGridViewAdapter(mContext, result);
+//            gvTag.setAdapter(adapter);
+//
+//            //设置item的点击事件
+//            gvTag.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//                @Override
+//                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+//                    TagBean.ResultBean tagBean = result.get(position);
+//                    Toast.makeText(mContext, "" + tagBean.toString(), Toast.LENGTH_SHORT).show();
+//                }
+//            });
 
-            //设置item的点击事件
-            gvTag.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+            idFlowlayout.setAdapter(new TagAdapter(result)
+            {
                 @Override
-                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                    TagBean.ResultBean tagBean = result.get(position);
-                    Toast.makeText(mContext, ""+tagBean.toString(), Toast.LENGTH_SHORT).show();
+                public View getView(FlowLayout parent, int position, Object s)
+                {
+                    TextView tv = (TextView) View.inflate(mContext,R.layout.tv, null);
+                    tv.setText(result.get(position).getName());
+                    tv.setTextColor(colors[position%colors.length]);
+                    return tv;
                 }
             });
-
 
         }
 
     }
 
-
-
     @Override
     public void onDestroyView() {
         super.onDestroyView();
         ButterKnife.reset(this);
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        // TODO: inflate a fragment view
+        View rootView = super.onCreateView(inflater, container, savedInstanceState);
+        ButterKnife.inject(this, rootView);
+        return rootView;
     }
 }
