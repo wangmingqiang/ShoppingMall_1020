@@ -30,7 +30,6 @@ public class Constants {
      */
     public static String BASE_URL_IMAGE  = BASE_URL+"/img";
 
-
     //小裙子
     public static final String SKIRT_URL = BASE_URL_JSON + "SKIRT_URL.json";
     //上衣

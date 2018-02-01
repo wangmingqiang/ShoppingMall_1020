@@ -55,6 +55,7 @@ public class WebViewActivity extends AppCompatActivity {
         ButterKnife.inject(this);
 
         getData();
+
     }
 
     private void getData() {

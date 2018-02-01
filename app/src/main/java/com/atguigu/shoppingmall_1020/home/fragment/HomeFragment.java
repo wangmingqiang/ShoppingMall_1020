@@ -125,6 +125,7 @@ public class  HomeFragment extends BaseFragment {
         //设置布局管理器
         GridLayoutManager manager = new GridLayoutManager(mContext, 1);
         rvHome.setLayoutManager(manager);
+
         manager.setSpanSizeLookup(new GridLayoutManager.SpanSizeLookup() {
             @Override
             public int getSpanSize(int position) {

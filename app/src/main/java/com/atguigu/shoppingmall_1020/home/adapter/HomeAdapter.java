@@ -373,6 +373,7 @@ public class HomeAdapter extends RecyclerView.Adapter {
             adapter.setOnItemClickListener(new ViewPagerAdapter.OnItemClickListener() {
                 @Override
                 public void OnItemClickListener(View v, int position) {
+
                     HomeBean.ResultEntity.ActInfoEntity actInfoEntity = act_info.get(position);
 
 
@@ -425,10 +426,10 @@ public class HomeAdapter extends RecyclerView.Adapter {
     }
 
 
-    class BannerViewHolder extends RecyclerView.ViewHolder {
+        class BannerViewHolder extends RecyclerView.ViewHolder {
 
-        private final Context mContext;
-        private Banner banner;
+            private final Context mContext;
+            private Banner banner;
 
         public BannerViewHolder(Context mContext, View itemView) {
             super(itemView);
